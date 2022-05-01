@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Man 3</title>
+
+    <style>
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+
+:root{
+    --main-color: #F40612;
+    --text-color: rgb(9, 9, 9);
+    --bg-color: white;
+}
+
+/* custom scroll bar*/
+
+html::-webkit-scrollbar{
+    width: 0.4rem;
+    background:var(--text-color);
+}
+
+html::-webkit-scrollbar-thumb{
+    background: var(--main-color);
+    border-radius: 5rem;
+}
+
+body{
+
+    background: var(--text-color);
+    color: var(--bg-color);
+    background: linear-gradient(to right, rgb(0, 0, 0), #8a0000);
+            background-size: 400% 400%;
+            animation: animate-background 30s infinite ease-in-out;
+}
+
+@keyframes animate-background{
+    
+            0%{
+                background-position: 0 50%;
+            }
+            50%{
+                background-position: 100% 50%;
+            }
+            100%{
+                background-position: 0 50%;
+            }
+        }
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 100px;
+    z-index: 1000;
+}
+/*
+header .logo{
+    max-width: 120px;
+}*/
+header .toggle{
+    max-width: 60px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    filter: invert(1);
+    
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 100px;
+    background: url(https://wallpapercave.com/wp/wp2560918.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.banner .content{
+    max-width: 550px;
+}
+.banner .content h2{
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 2.5em;
+    letter-spacing: 0.1em;
+    color: #fff;
+}
+.banner .content h2 span{
+    font-weight: 800;
+}
+.banner .content p{
+    
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 0.02em;
+    line-height: 1.5em;
+    color: #fff;
+    margin: 15px 0 35px;
+}
+.play{
+    position: relative;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-size: 1.2em;
+}
+.play img{
+    margin-right: 10px;
+    max-width: 50px;
+}
+.trailer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    background: rgba(0, 0, 0, 0.95);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+}
+.trailer.active{
+    visibility: visible;
+    opacity: 1;
+}
+.trailer iframe{
+    max-width: 900px;
+    outline: none;
+    width: 1300px;
+    height: 550px;
+}
+.trailer .close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    filter: invert(1);
+    max-width: 32px;
+}
+
+.heading{
+    max-width: 968px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 20px;
+    border-bottom: 1px solid var(--main-color);
+    
+}
+
+
+.download-container{
+    
+    max-width: 100%;
+    width: 100%;
+    height: 150px;
+    
+}
+
+.download-container p{
+    text-align: center;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+.button{
+    text-decoration: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 40px;
+    font-family: tahoma;
+    font-weight: bolder;
+    transition: all 1.3s;
+    position:relative;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    
+}
+
+.button:hover{
+    color: black;
+    box-shadow: 0 3px 20px 0 red inset, 0 3px 20px 0 red,
+                0 3px 20px 0 red inset, 0 3px 20px 0 red;
+
+    text-shadow: 0 0 6px red, 0 0 6px red;
+}
+
+.copyright{
+    padding: 20px;
+    color: var(--bg-color);
+    text-align: center;
+    margin-top: 100px;
+
+}
+
+@media (max-width: 991px){
+    header{
+        padding: 20px 50px;
+    }
+    header{
+        padding: 20px 50px;
+    }
+    header .logo{
+        max-width: 80px;
+    }
+    header .toggle{
+        max-width: 40px;
+    }
+    .banner{
+        padding: 100px 50px;
+    }
+    .banner .content h2{
+        font-weight: 400;
+        font-size: 2em;
+        letter-spacing: 0.05em; 
+    }
+    .banner .content p{
+        font-size: 1em;
+    }
+    .trailer iframe{
+        max-width: 90%;
+        outline: none;
+        width: 500px;
+        height: 200px;
+    }
+    .button{
+        position:relative;
+        top: 50%;
+        left: 7%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+        line-height: 55px;
+    }
+    .copyright{
+        font-size: 10px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    
+    <section>
+
+    <header>
+
+        <div class="toggle"> <a href="../../movie.html"></a> <img alt="back" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMjQiIGhlaWdodD0iMjQiCnZpZXdCb3g9IjAgMCAyNCAyNCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIgNSBMIDIgNyBMIDIyIDcgTCAyMiA1IEwgMiA1IHogTSAyIDExIEwgMiAxMyBMIDIyIDEzIEwgMjIgMTEgTCAyIDExIHogTSAyIDE3IEwgMiAxOSBMIDIyIDE5IEwgMjIgMTcgTCAyIDE3IHoiPjwvcGF0aD48L3N2Zz4="/></div>
+
+    </header>
+
+    <div class="banner">
+
+        <div class="content">
+
+            <h2><span>Iron Man 3</span></h2>
+
+            <p>
+
+                Tony Stark encounters a formidable foe called the Mandarin. After failing to defeat his enemy, Tony embarks on a journey of self-discovery as he fights against the powerful Mandarin.
+               <br><br> Release date: 26 April 2013 (India)
+              <br> Director: Shane Black
+              <br> Box office: 121.5 crores USD
+              <br> Budget: $200 million
+              <br> Music by: Brian Tyler
+              <br> Distributed by: Paramount Pictures Studios, Walt Disney Pictures, Walt Disney Studios Motion Pictures
+
+            </p>
+
+            <a href="#" class="play" onclick="toggle()"><img src="./play.png" alt="tralier">watch now</a>
+
+        </div>
+
+    </div>
+
+    <div class="trailer">
+
+       <!-- <video src="" controls></video> -->
+       <iframe src="https://www.youtube-nocookie.com/embed/wKtcmiifycU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <img src="./close.png" alt="Close" onclick="toggle()" class="close">
+
+    </div>
+
+    </section>
+
+    <section class="download-container">
+
+        <h2 class="heading">Watch Online</h2>
+
+        <!--iframe tags will be here man-->
+        
+        <p>Video not Available</p>
+
+    </section>
+
+    <section class="download-container">
+
+
+        <h2 class="heading">Downloads</h2>
+
+        <a target="_blank" href="https://terabox.com/s/1FflzLpH1FbNZ2f2GKTTj8g" class="button">3d vr</a>
+        <a target="_blank" href="https://driveapp.in/dfile/SJfjawvR0oSAd0TwgDnw93iCreZROkMabYsrjrV5" class="button">sd</a>
+        <a target="_blank" href="https://driveapp.in/dfile/83So5XPqw9PunrMPqZaGYVOxn74CyCmiDq9YLdH7" class="button">hd</a>
+        <a target="_blank" href="https://driveapp.in/dfile/SLCXiYx7V5Q4CrvKOItEweiXY64SNSunOdKpkBgc" class="button">fhd</a>       
+        <a target="_blank" href="https://yts.mx/torrent/download/FB161A4DF90FE58D1DEA14B0970D7DDFE7FB42A6" class="button">4k</a>       
+        
+
+    </section>
+
+    <section class="copyright">
+
+        <p>&#169; MOVIEGIGS All Right Reserved</p>
+        
+    </section>
+
+
+    <script>
+
+        function toggle(){
+
+            var trailer = document.querySelector('.trailer');
+            let iframe = document.querySelector('.iframe');
+
+            trailer.classList.toggle('active');
+            video.currentTime = 0;
+            video.pause();
+
+        }
+
+    </script>
+
+</body>
+</html>
