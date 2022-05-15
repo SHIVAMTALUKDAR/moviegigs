@@ -73,7 +73,7 @@ header .toggle{
     width: 100%;
     min-height: 100vh;
     padding: 0 100px;
-    background: url(https://initiate.alphacoders.com/images/835/stretched-1920-1080-835652.png?1389);
+    background: url(https://initiate.alphacoders.com/images/738/stretched-1920-1080-738176.png?4635);
     background-position: center;
     background-size: cover;
     display: flex;
@@ -89,6 +89,7 @@ header .toggle{
     font-size: 2.5em;
     letter-spacing: 0.1em;
     color: #fff;
+    text-shadow: 0 0 15px  black;
 }
 .banner .content h2 span{
     font-weight: 800;
@@ -101,6 +102,7 @@ header .toggle{
     line-height: 1.5em;
     color: #fff;
     margin: 15px 0 35px;
+    text-shadow: 0 0 15px  black;
 }
 .play{
     position: relative;
@@ -113,6 +115,7 @@ header .toggle{
     text-decoration: none;
     letter-spacing: 2px;
     font-size: 1.2em;
+    text-shadow: 0 0 15px  black;
 }
 .play img{
     margin-right: 10px;
@@ -172,6 +175,12 @@ header .toggle{
     
 }
 
+.frame-container{
+    max-width: 100%;
+    width: 100%;
+    height: 700px;
+}
+
 .download-container p{
     text-align: center;
     position:relative;
@@ -180,6 +189,26 @@ header .toggle{
     transform: translate(-50%, -50%);
     
 }
+
+.frame{
+    text-decoration: none;
+    padding: 15px 40px;
+    text-transform: uppercase;
+    color: var(--bg-color);
+    border: 2px solid var(--main-color);
+    border-radius: 40px;
+    font-family: tahoma;
+    font-weight: bolder;
+    transition: all 1.3s;
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    height: 500px;
+    width: 1000px;
+}
+
 
 
 .button{
@@ -270,6 +299,20 @@ header .toggle{
         width: 500px;
         height: 200px;
     }
+    .frame-container{
+        height: 390px;
+    }
+    .frame{
+        position:relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 10px;
+        max-width: 98%;
+        outline: none;
+        width: 500px;
+        height: 200px;
+    }
     .button{
         position:relative;
         top: 50%;
@@ -336,6 +379,16 @@ header .toggle{
 
     </section>
 
+    <section class="frame-container">
+
+        <h2 class="heading">Watch Online</h2>
+
+        <!--iframe tags will be here man-->
+        
+        <iframe class="frame" src="https://www.youtube-nocookie.com/embed/Lt2EuSb3-V4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </section>
+
 
     <section class="download-container">
 
@@ -349,7 +402,13 @@ header .toggle{
 
     <section class="download-container">
 
-        <a target="_blank" href="https://fembed-hd.com/v/ry7jrsezq6rzeg8" class="button1">WATCH ONLINE</a>
+        <a target="_blank" href="https://animixplay.to/v1/koe-no-katachi-movie" class="button1">WATCH ONLINE SUB</a>
+
+    </section>
+
+    <section class="download-container">
+
+        <a target="_blank" href="https://animixplay.to/v1/koe-no-katachi-dub" class="button1">WATCH ONLINE DUB</a>
 
     </section>
 
